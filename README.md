@@ -28,181 +28,34 @@ Iterating through the tuplet list and checking if the key existes within the dic
 ![Screenshot](https://i.imgur.com/WPYiGd2.png)
 
 ## 3.
-To find if students shared or had unique classes from each other, first add them into seperate lists of "Python class" and "Web Application.
+This question implements the image classification with CNN (Convolutional Neural Network) on the natural-images dataset.
 
-![Screenshot](https://i.imgur.com/e6AyBzi.png)
+![Question 3 CNN Result](https://user-images.githubusercontent.com/47049525/57012110-80347c80-6bca-11e9-90c0-17e365f10164.PNG)
 
-Once the lists are obtained, create two new lists for common classes and unique classes. Iterating through a for loop to check if Python[x] is in WebApplication[x]. If the element is found in the comparison lists, they share a school class and are appended to "both_list". The reverse is done for the "not_common_list". Iterate through both lists of Python and Webapplication and check if they are "not in" each others elements. If so, append to "not_common_list".
-
-![Screenshot](https://i.imgur.com/W5fFIsf.png)
 
 ## 4.
-The user will input a string and it will be checked for duplicate characters and longest substring.
+This question implements the text classification with CNN (Convolutional Neural Network) on the following movie reviews dataset.
 
-![Screenshot](https://i.imgur.com/sgTPPzB.png)
+Code:
+![CNN_1st](https://user-images.githubusercontent.com/47049525/57012094-609d5400-6bca-11e9-8f75-bf3b9456f0f9.PNG)
+![CNN_2nd](https://user-images.githubusercontent.com/47049525/57012095-609d5400-6bca-11e9-97af-0731240d04b4.PNG)
 
-Once the input is recieved it is iterated through a loop. Once in the loop if a unique character is not in an empty list made outside of the loop, it is appended to the list and a temporary value is increased, this is how unique character count is tracked. If its already in the list reset, the length. After iterating compare the final answer to the temporary answer and temporary length to the final legnth to find which is bigger to output.
+Output:
+![CNN_Output_1](https://user-images.githubusercontent.com/47049525/57012096-609d5400-6bca-11e9-89d2-6e827085e607.PNG)
+![CNN_Output_2](https://user-images.githubusercontent.com/47049525/57012097-6135ea80-6bca-11e9-84fe-2d0ed275f1e6.PNG)
 
-![Screenshot](https://i.imgur.com/x0n3mnr.png)
 
 ## 5.
 
-<details><summary>Question 5 Code</summary>
-<p>
-  
-```
-import random
+This question implements the text classification with LSTM (Long Short Term Memory) on the following movie reviews dataset.
 
-print("\n")
-print("Airline Booking System\n")
+Code:
+![5th Question Code Part 1](https://user-images.githubusercontent.com/47049525/57012046-292ea780-6bca-11e9-9a41-4d8e6a5f64aa.PNG)
+![5th Question Code Part 2](https://user-images.githubusercontent.com/47049525/57012047-292ea780-6bca-11e9-85ba-d1c3bccf8001.PNG)
 
+Output:
+![5h Question Output](https://user-images.githubusercontent.com/47049525/57012048-292ea780-6bca-11e9-8748-d65e3ee739c6.PNG)
 
-class Person:   # base class #1 Person ==> Passenger and Employee Class will inherit from Person
-
-    def __init__(self, first, last):    # example of use of self.
-        self.first = first
-        self.last = last
-
-    def fullname(self):
-        return '{} {}'.format(self.first, self.last)
-
-
-class Passenger(Person):    # class #2 Passenger. Inherits from Person class
-
-    def __init__(self, first, last, passport, choice):
-        super().__init__(first, last)   # super call
-        self.passport = passport
-        self.choice = choice
-
-
-class Employee(Person): # class #3 Employee. Inherits from Person class
-
-    def __init__(self, first, last, job_title):
-        super().__init__(first, last)   # super call
-        self.job_title = job_title
-
-
-class Destination: # class #4 base class; used for displaying flight options
-    def __init__(self, location):
-        self.location = location
-
-    def display_location(self):
-        print("List of current available flights:")
-        print("-----------------------------------")
-        for flights in self.location:
-            print(flights)
-
-
-class Airline: # class #5 base class; generates random number for flight and gate number
-    def __init__(self, flight_number = random.randint(100,700), gate_number = random.randint(1,40)):
-        self.flight_number = flight_number
-        self.gate_number = gate_number
-
-    def plane_info(self):
-        print("Flight number:", self.flight_number, "Gate number:", self.gate_number)
-
-
-class Payment(Passenger): # class #6, example of multiple inheritance, inherits from Passenger that inherits from Person
-    def __init__(self, first, last, passport, choice, card):
-        super().__init__(first, last, passport, choice)
-        self.__card = card  # private data member
-
-
-def main():
-
-
-    flights = Destination([("Select 1:", "NRT", 1800), ("Select 2:", "LAX", 550), ("Select 3:", "MCI", 300)])
-    # instance of Destination; class will display different flight options
-
-    plane1 = Airline() # instance of Airline, will RNG flight number and gate number for plane
-
-
-    done = False    # allows for users who choose option one to be able to opt into option 2
-
-    while done is False:
-
-        print("\n")
-        print("Options Menu")
-        print("1: Display available flights")
-        print("2: Book a flight")
-
-        option = int(input("Select option: "))
-
-        if option == 1:
-            print("\n")
-            flights.display_location()  # display flight options
-
-        if option == 2:
-
-            booking_choice = int(input("To book as a passenger, enter 1. to book as an employee, enter 2. "))
-            # book as a passenger or employee
-
-            if booking_choice == 1:
-
-                # instance of Passenger; user inputs needed information for class
-                per1 = Passenger(input("First name: "), input("Last name: "), input("Passport information: "),
-                                 int(input("Flight Choice: ")))
-
-                if per1.choice == 1:
-
-                    # instance of Payment; overrides per1 and allows to enter credit card information
-                    per1 = Payment(per1.first, per1.last, per1.passport, per1.choice,
-                                   int(input("Enter Card Information:")))
-
-                    print("PRINTING TICKET:\n")
-                    print(per1.fullname())
-                    plane1.plane_info()
-                    print("Flight Destination: NRT. Total Cost = $1800.00")
-                    input()
-                    done = True
-
-                elif per1.choice == 2:
-
-                    # instance of Payment; overrides per1 and allows to enter credit card information
-                    per1 = Payment(per1.first, per1.last, per1.passport, per1.choice,
-                                   int(input("Enter Card Information: ")))
-
-                    print("PRINTING TICKET:\n")
-                    print(per1.fullname())
-                    plane1.plane_info()
-                    print("Flight Destination: LAX. Total Cost = $550.00")
-                    input()
-                    done = True
-
-                elif per1.choice == 3:
-
-                    # instance of Payment; overrides per1 and allows to enter credit card information
-                    per1 = Payment(per1.first, per1.last, per1.passport, per1.choice,
-                                   int(input("Enter Card Information: ")))
-
-                    print("PRINTING TICKET:\n")
-                    print(per1.fullname())
-                    plane1.plane_info()
-                    print("Flight Destination: MCI. Total Cost = $300.00")
-                    input()
-                    done = True
-
-            elif booking_choice == 2:
-
-                # instance of Employee class, user enters first/last name and job title
-                employee = Employee(input("First name: "), input("Last name: "), input("Enter job title: "))
-                print(employee.fullname())
-                print(employee.job_title)
-                print("Thank you for signing in. Please wait for job assignment.")
-                input()
-                done = True
-```
-</p>
-</details>
-
-
-Before using the code, you must import random to create a random integer for the ticket number. 6 Classes were created with Person being the main class. Employee and Passanger are derived from these. Destination and Airline are base classes independant from each other, and payment is derived from Passenger since they will be the only users to pay credit.
-
-![Screenshot](https://i.imgur.com/PKnhOhS.png)
-
-Depending on which person is choosing, the program directs them towards a payment or to be stationed for their job.
-
-![Screenshot](https://i.imgur.com/Bnotd6B.png)
 
 ## 6.
 Using LSTM model, we got 62% accuracy over 50.48% with CNN model. Thus, for this case, LSTM is clearly a better way to go.
@@ -233,8 +86,6 @@ Used Tanh Function:
 
 Changed Learning rate from 0.01-0.02:
 ![CNN_L_Rate_0 02](https://user-images.githubusercontent.com/47049525/57011638-46627680-6bc8-11e9-9f2a-8e684166fa44.PNG)
-
-
 
 
 
