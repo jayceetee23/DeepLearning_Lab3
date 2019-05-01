@@ -6,8 +6,7 @@ The purpose of this programming lab is to demonstrate the use and creation of di
  
  ## II. Objectives.
  
- Provided were six indivudual questions that would allow one to grasp the basics of python such as using, loops, classes, lists, dictionaries, string fucntions, and what python is most known for, importing libraries. 
- The questions in order were to help facilitate each of pythons basic uses:
+Provided were 6 questions that would allow one to understand the different neural network models in different situations. In the following examples we will be working with .csv datasets as well as image datasets. The questions are as follows:
  
 ![Questions](https://user-images.githubusercontent.com/47049525/57011101-9c81ea80-6bc5-11e9-840c-3052bfc2c8ad.PNG)
 
