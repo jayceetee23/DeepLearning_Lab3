@@ -205,14 +205,39 @@ Depending on which person is choosing, the program directs them towards a paymen
 ![Screenshot](https://i.imgur.com/Bnotd6B.png)
 
 ## 6.
-To webscrape you must import Beautifulsoup 4, request, and os libraries into python. First a text file is created to parse data onto. Once a file has been opened the program is to scrape the wiki page "https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States" and search for a table and find table rows.
+Using LSTM model, we got 62% accuracy over 50.48% with CNN model. Thus, for this case, LSTM is clearly a better way to go.
+
+Holding other Hyperparameters constant:
+
+1-When added more layers to CNN, accuracy increased from 50.48% to 50.55%.
+
+2-When changed the Epoch from 2 to 5 in CNN model, accuracy increased from 50.48% to 50.81%.
+
+3-When used “Sigmoid” instead of “Relu” in CNN model, accuracy remained unchanged at 50.48%.
+
+4-When used “Tanh” instead of “Relu” in CNN model, accuracy increased from 50.48% to 50.91%.
+
+5-When changed learning rate from 0.01 to 0.02 in CNN model, accuracy increased from 50.48% to 50.82%.
+
+Changed Layer Number:
+![CNN_Changed_Layer_Num](https://user-images.githubusercontent.com/47049525/57011637-46627680-6bc8-11e9-9c2a-de231ef18ee0.PNG)
+
+Changed Epoch from 2 to 5:
+![CNN_5Epochs](https://user-images.githubusercontent.com/47049525/57011576-f4215580-6bc7-11e9-82f6-64b92fc51116.PNG)
+
+Used Sigmoid Function:
+![CNN_Sigmoid](https://user-images.githubusercontent.com/47049525/57011639-46fb0d00-6bc8-11e9-91c7-f034e8f34c9f.PNG)
+
+Used Tanh Function:
+![CNN_Tanh](https://user-images.githubusercontent.com/47049525/57011635-46627680-6bc8-11e9-8caf-f308e69c0b98.PNG)
+
+Changed Learning rate from 0.01-0.02:
+![CNN_L_Rate_0 02](https://user-images.githubusercontent.com/47049525/57011638-46627680-6bc8-11e9-9f2a-8e684166fa44.PNG)
 
 
-![Screenshot](https://i.imgur.com/OpwGpg6.png)
 
-Once the table rows have been found, obtain the headers which are state names and append them to a list. After obtaining all the data from the table, it iterates through the state list and write it to the file and close it once it is finished. This will be what is obtain in the file, with the state abbreviations in front of each data.
 
-![Screenshot](https://i.imgur.com/xIVDP4N.png)
+
 
 ## V. Dataset
 
