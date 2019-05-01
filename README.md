@@ -30,6 +30,11 @@ Iterating through the tuplet list and checking if the key existes within the dic
 ## 3.
 This question implements the image classification with CNN (Convolutional Neural Network) on the natural-images dataset.
 
+Code:
+![Code1](https://user-images.githubusercontent.com/47049525/57012540-ae1ac080-6bcc-11e9-9556-2534ef210031.PNG)
+![Code2](https://user-images.githubusercontent.com/47049525/57012542-ae1ac080-6bcc-11e9-8218-8a9e82be1da8.PNG)
+
+Results:
 ![Question 3 CNN Result](https://user-images.githubusercontent.com/47049525/57012110-80347c80-6bca-11e9-90c0-17e365f10164.PNG)
 
 
