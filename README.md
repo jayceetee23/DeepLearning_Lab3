@@ -12,20 +12,23 @@ Provided were 6 questions that would allow one to understand the different neura
 
 ## III. Approaches/Methods / IV. Workflow
 ## 1.
-To solve question one, a class was used so that input could be obtained without any overlapping accounts getting in the way.
 
-![Screenshot](https://i.imgur.com/vYuqCZ3.png)
+![Loss Plot Q1](https://user-images.githubusercontent.com/47049525/57013141-b6c0c600-6bcf-11e9-99a2-07990aac821a.png)
 
-Since input is obtained in one line, the program will split the Command, and money amount and choose which option to pick based on the length of the list. Any input not recognized will throw an invalid input message at the user but is case insensitive.
+![TensorBoard Q1](https://user-images.githubusercontent.com/47049525/57013143-b7595c80-6bcf-11e9-9761-a4310200a01b.png)
 
-![Screenshot](https://i.imgur.com/3F7ozmb.png)
+Part b:
+[part b.txt](https://github.com/jayceetee23/DeepLearning_Lab3/files/3134225/part.b.txt)
+
+
 
 ## 2.
-Iterating through the tuplet list and checking if the key existes within the dictionary before appending the value to the to a new list.. Since keys cannot have multiple values, an appended list was the alternative to create a "Mutli valued Key".
+This question implements Logistic Regression on the heart disease uci dataset.
+![Question 2 Code](https://user-images.githubusercontent.com/47049525/57012644-313c1680-6bcd-11e9-9f6d-ee8fa2b4cfb7.PNG)
 
-![Screenshot](https://i.imgur.com/CACWZND.png)
+Q2 Loss:
+![Q2 loss](https://user-images.githubusercontent.com/47049525/57013118-91cc5300-6bcf-11e9-93b6-45e32c5ec3c8.png)
 
-![Screenshot](https://i.imgur.com/WPYiGd2.png)
 
 ## 3.
 This question implements the image classification with CNN (Convolutional Neural Network) on the natural-images dataset.
