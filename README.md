@@ -13,6 +13,11 @@ Provided were 6 questions that would allow one to understand the different neura
 ## III. Approaches/Methods / IV. Workflow
 ## 1.
 
+Code:
+![Q1 Code](https://user-images.githubusercontent.com/47049525/57013267-4a929200-6bd0-11e9-825a-330f01f31278.PNG)
+![Q1 Code 2](https://user-images.githubusercontent.com/47049525/57013268-4a929200-6bd0-11e9-8b47-a9848616a808.PNG)
+
+Part a:
 ![Loss Plot Q1](https://user-images.githubusercontent.com/47049525/57013141-b6c0c600-6bcf-11e9-99a2-07990aac821a.png)
 
 ![TensorBoard Q1](https://user-images.githubusercontent.com/47049525/57013143-b7595c80-6bcf-11e9-9761-a4310200a01b.png)
