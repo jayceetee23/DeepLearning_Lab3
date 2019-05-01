@@ -1,56 +1,15 @@
 # DeepLearning_Lab3
 
-# Lab-1
 ## I. Introduction
 
- The first lab was simply to help obtain a mastery over python which will helpful, if not mandatory in the future for the use of deep learning. There was no overlying problems to be solved or intentions to create anything useful other than for the sole purpose of self-practice.
+In this lab demonstration, we will be 
  
  ## II. Objectives.
  
  Provided were six indivudual questions that would allow one to grasp the basics of python such as using, loops, classes, lists, dictionaries, string fucntions, and what python is most known for, importing libraries. 
  The questions in order were to help facilitate each of pythons basic uses:
  
-<details><summary>1. Create a banking system to improve mastery of algberaic operators and obtaining user input.</summary>
-<p>
- 
-![Screenshot](https://i.imgur.com/sF0R0wx.png)
-</p>
-</details>
-
-<details><summary>2. Organize a list of tuples into a dictionary.</summary>
-<p>
- 
-![Screenshot](https://i.imgur.com/tIvHyhs.png)
-</p>
-</details>
-
-<details><summary>3. Comparing lists and making use of checking operators.</summary>
-<p>
- 
-![Screenshot](https://i.imgur.com/sGOk2wi.png)
-</p>
-</details>
-
-<details><summary>4. Manipulate string inputs from user.</summary>
-<p>
-  
-![Screenshot](https://i.imgur.com/g8dcLlE.png)
-</p>
-</details>
-
-<details><summary>5. Create a class system of "Airline Booking Reservation System" or "Library Management System", that included inheritance, supercalls and utilizing private member variables.</summary>
-<p>
-  
-![Screenshot](https://i.imgur.com/Gr6NZnq.png)
-</p>
-</details>
-
-<details><summary>6. Copying a table off wikipedia, using imported libraried, Beautiful Soup and Request to learn to scrape the web.</summary>
-<p>
-  
-![Screenshot](https://i.imgur.com/In4AmmQ.png)
-</p>
-</details>
+![Questions](https://user-images.githubusercontent.com/47049525/57011101-9c81ea80-6bc5-11e9-840c-3052bfc2c8ad.PNG)
 
 ## III. Approaches/Methods / IV. Workflow
 ## 1.
