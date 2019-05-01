@@ -23,92 +23,7 @@ Part a:
 ![TensorBoard Q1](https://user-images.githubusercontent.com/47049525/57013143-b7595c80-6bcf-11e9-9761-a4310200a01b.png)
 
 Part b:
-Original:
-
-model = Sequential() # create model
-model.add(Dense(32, input_dim=n_cols, init='uniform', activation='sigmoid'))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(32, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(1, activation='tanh')) # output layer
-model.add(Dropout(0.1))
-
-model.compile(optimizer=Adam(lr=.001),loss='mean_squared_error', metrics=['accuracy'])
-history = model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=32, callbacks=[tbCallBack])
-
-Trained:  0.88 , trained data loss 0.1153
-Validation:  0.8824 , validation loss  0.1138
--------------------------------------------------------------------------------------------------------------------------------
-LEARNING RATE CHANGE:
-
-model = Sequential() # create model
-model.add(Dense(32, input_dim=n_cols, init='uniform', activation='sigmoid'))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(32, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(1, activation='tanh')) # output layer
-model.add(Dropout(0.1))
-
-model.compile(optimizer=Adam(lr=.003),loss='mean_squared_error', metrics=['accuracy'])
-history = model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=32, callbacks=[tbCallBack])
-
-Trained:  0.88 , trained data loss 0.111
-Validation:  0.8824 , validation loss  0.1102
--------------------------------------------------------------------------------------------------------------------------------
-BATCH SIZE CHANGE:
-
-model = Sequential() # create model
-model.add(Dense(32, input_dim=n_cols, init='uniform', activation='sigmoid'))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(32, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(1, activation='tanh')) # output layer
-model.add(Dropout(0.001))
-
-model.compile(optimizer=Adam(lr=.001),loss='mean_squared_error', metrics=['accuracy'])
-history = model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=16, callbacks=[tbCallBack])
-
-Trained:  0.88 , trained data loss 0.1082
-Validation:  0.8824 , validation loss  0.1067
--------------------------------------------------------------------------------------------------------------------------------
-OPTIMIZER CHANGE:
-
-model = Sequential() # create model
-model.add(Dense(32, input_dim=n_cols, init='uniform', activation='sigmoid'))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(32, activation="relu", kernel_initializer="uniform"))
-model.add(Dense(1, activation='tanh')) # output layer
-model.add(Dropout(0.1))
-
-model.compile(optimizer=SGD(lr=.001),loss='mean_squared_error', metrics=['accuracy'])
-history = model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=32, callbacks=[tbCallBack])
-
-Trained:  0.12 , trained data loss 0.4843
-Validation:  0.1176 , validation loss  0.4854
-
--------------------------------------------------------------------------------------------------------------------------------
-ACTIVATION CHANGE:
-
-model = Sequential() # create model
-model.add(Dense(32, input_dim=n_cols, init='uniform', activation='sigmoid'))
-model.add(Dense(64, activation="sigmoid", kernel_initializer="uniform"))
-model.add(Dense(64, activation="sigmoid", kernel_initializer="uniform"))
-model.add(Dense(64, activation="sigmoid", kernel_initializer="uniform"))
-model.add(Dense(32, activation="sigmoid", kernel_initializer="uniform"))
-model.add(Dense(1, activation='relu')) # output layer
-model.add(Dropout(0.1))
-
-model.compile(optimizer=Adam(lr=.001),loss='mean_squared_error', metrics=['accuracy'])
-history = model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=32, callbacks=[tbCallBack])
-Trained:  0.88 , trained data loss 0.1124
-Validation:  0.8824 , validation loss  0.111
-
-
+[part b.txt](https://github.com/jayceetee23/DeepLearning_Lab3/files/3134225/part.b.txt)
 
 ## 2.
 This question implements Logistic Regression on the heart disease uci dataset.
@@ -184,21 +99,24 @@ Changed Learning rate from 0.01-0.02:
 ![CNN_L_Rate_0 02](https://user-images.githubusercontent.com/47049525/57011638-46627680-6bc8-11e9-9f2a-8e684166fa44.PNG)
 
 
-
-
 ## V. Dataset
 
-The only dataset used was the data table about the United States of America and its respective states.
-![Screenshot](https://i.imgur.com/To2WFXe.png)
+Datasets used:
+Question 1: esp_studies1
+Question 2: https://www.kaggle.com/ronitf/heart-disease-uci
+Question 3: https://www.kaggle.com/prasunroy/natural-images
+Questions 4-6: https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/data.
 
 ## VI. Parameters
 
-There were no parameters as these were indivudual questions with no correlation to eachother.
+-Questions 1 and 2 use keras to implement Linear Regression and Logistic Regression, respectively.
+-Question 3 uses CNN on the natural images dataset.
+-Questions 4-6 use CNN, LSTM models and compares which of the two give the best result.
 
 ## VII Evaluation and Discussion
 
-The questions provided were quite challenging. Additional features could have been added to many of the programs above such as error handling, or bad input. Some of the questions were confusing to implement as the questions could have been clarified more. Such as in question 6 whether it was asking for the entire table or just the States and Capital. Question 5 did not have a clear goal in output other than just to implement classes.
+Questions provided allowed for practical implementation and understanding of DeepLearning and various neural network models. Each example provides different use cases from image classification to reading .csv datasets. 
 
 ## VIII Conclusion
 
-Overall this lab was an excellent exercise to prepare for Deep Learning using python. It has gone over the basics of scraping the web, and using its basic functions. 
+In conclusion, this lab exercise provided good demonstrations to an introduction to DeepLearning and different neural networks. These types of examples can be extremely useful in real world applications, from image recognition software to creating models to make predictions on various datasets.
