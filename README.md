@@ -12,6 +12,7 @@ Provided were 6 questions that would allow one to understand the different neura
 
 ## III. Approaches/Methods / IV. Workflow
 ## 1.
+In question 1, a Sequential model is built using keras to implement Linear Regression. Keras is utilized to create a Sequential model.
 
 Code:
 ![Q1 Code](https://user-images.githubusercontent.com/47049525/57013267-4a929200-6bd0-11e9-825a-330f01f31278.PNG)
@@ -26,7 +27,7 @@ Part b:
 [part b.txt](https://github.com/jayceetee23/DeepLearning_Lab3/files/3134225/part.b.txt)
 
 ## 2.
-This question implements Logistic Regression on the heart disease uci dataset.
+This question implements Logistic Regression on the heart disease uci dataset.  Keras is utilized to create a Sequential model.
 ![Question 2 Code](https://user-images.githubusercontent.com/47049525/57012644-313c1680-6bcd-11e9-9f6d-ee8fa2b4cfb7.PNG)
 
 Q2 Loss:
