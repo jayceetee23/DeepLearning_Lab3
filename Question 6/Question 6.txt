@@ -1,0 +1,16 @@
+6th Question
+
+Using LSTM model, we got 62% accuracy over 50.48% with CNN model. Thus, for this case, LSTM is clearly a better way to go.
+
+Holding other Hyperparameters constant:
+ 
+1-When added more layers to CNN, accuracy increased from 50.48% to 50.55%.
+
+2-When changed the Epoch from 2 to 5 in CNN model, accuracy increased from 50.48% to 50.81%.
+
+3-When used “Sigmoid” instead of “Relu” in CNN model, accuracy remained unchanged at 50.48%.
+
+4-When used “Tanh” instead of “Relu” in CNN model, accuracy increased from 50.48% to 50.91%.
+
+5-When changed learning rate from 0.01 to 0.02 in CNN model, accuracy increased from 50.48% to 50.82%.
+

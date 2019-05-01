@@ -1,0 +1,41 @@
+Dataset:  esp_studies1.csv
+
+Sources: L. Storm, P.E. Tressoldi, L. Di Risio (2010). "Meta-Analysis of
+Free-Response Studies, 1992:2008: Assessing the Noise Reduction Model in
+Parapsychology," Psychological Bulletin, Vol. 136, #4, pp. 471-485.
+
+J.N. Rouder, R.D. Morey, J.M. Province (2013). "A Bayes Factor Meta-Analysis
+of Recent Extrasensory Perception Experiments: Comment on Storm, Tressoldi,
+and Di Risio (2010)," Psychological Bulletin, Vol. 139, #1, pp. 241-247.
+
+L. Storm, P.E. Tressoldi, J. Utts (2013). "Testing the Storm et al. (2010)
+Meta-Analysis Using Bayesiand and Frequentist Approaches: Reply to Rouder
+et al. (2013)," Psychological Bulletin, Vol. 139, #1, pp. 248-254.
+
+Description: Results from 67 ESP experiments in 3 categories:
+1) Ganzfeld   2) Nonganzfeld with noise reduction   3) Standard free response
+Each trial is classified by: # trials, # Successes, z-score and 2 effect size
+measures. Studies 7 and 11 have different numbers than original paper.
+Z computed as follows (not all match authors' given z-values).
+p0 = 1/#choices   p_hat = #Success/#Trials = y/n
+
+p_hat >= p0   Z = (y - np0 - 0.5) / sqrt(n*p0*(1-p0))
+p_hat < p0   Z = (y - np0 + 0.5) / sqrt(n*p0*(1-p0))
+
+Effect Size 1: Z/sqrt(n)
+Effect Size 2 (Cohen's h): 2*(arcsin(sqrt(p_hat)) - arcsin(sqrt(p0)))
+
+Variable Names:
+Study  
+Group  
+InFinal   (1 if used in Reply to Rouder, et al by Storm,Tressoldi,Utts)
+Rouder1   (1 if used in Rouder, et al Comment on original paper)
+Year
+numtrials
+numhits
+k        (# choices, usually 4)
+pi_0
+pi_hat
+Z_obs
+eff_sz1
+eff_sz2
