@@ -18,12 +18,95 @@ Code:
 ![Q1 Code 2](https://user-images.githubusercontent.com/47049525/57013268-4a929200-6bd0-11e9-8b47-a9848616a808.PNG)
 
 Part a:
-![Loss Plot Q1](https://user-images.githubusercontent.com/47049525/57013141-b6c0c600-6bcf-11e9-99a2-07990aac821a.png)
 
+![Loss Plot Q1](https://user-images.githubusercontent.com/47049525/57013141-b6c0c600-6bcf-11e9-99a2-07990aac821a.png)
 ![TensorBoard Q1](https://user-images.githubusercontent.com/47049525/57013143-b7595c80-6bcf-11e9-9761-a4310200a01b.png)
 
 Part b:
-[part b.txt](https://github.com/jayceetee23/DeepLearning_Lab3/files/3134225/part.b.txt)
+Original:
+
+model = Sequential() # create model
+model.add(Dense(32, input_dim=n_cols, init='uniform', activation='sigmoid'))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(32, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(1, activation='tanh')) # output layer
+model.add(Dropout(0.1))
+
+model.compile(optimizer=Adam(lr=.001),loss='mean_squared_error', metrics=['accuracy'])
+history = model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=32, callbacks=[tbCallBack])
+
+Trained:  0.88 , trained data loss 0.1153
+Validation:  0.8824 , validation loss  0.1138
+-------------------------------------------------------------------------------------------------------------------------------
+LEARNING RATE CHANGE:
+
+model = Sequential() # create model
+model.add(Dense(32, input_dim=n_cols, init='uniform', activation='sigmoid'))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(32, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(1, activation='tanh')) # output layer
+model.add(Dropout(0.1))
+
+model.compile(optimizer=Adam(lr=.003),loss='mean_squared_error', metrics=['accuracy'])
+history = model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=32, callbacks=[tbCallBack])
+
+Trained:  0.88 , trained data loss 0.111
+Validation:  0.8824 , validation loss  0.1102
+-------------------------------------------------------------------------------------------------------------------------------
+BATCH SIZE CHANGE:
+
+model = Sequential() # create model
+model.add(Dense(32, input_dim=n_cols, init='uniform', activation='sigmoid'))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(32, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(1, activation='tanh')) # output layer
+model.add(Dropout(0.001))
+
+model.compile(optimizer=Adam(lr=.001),loss='mean_squared_error', metrics=['accuracy'])
+history = model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=16, callbacks=[tbCallBack])
+
+Trained:  0.88 , trained data loss 0.1082
+Validation:  0.8824 , validation loss  0.1067
+-------------------------------------------------------------------------------------------------------------------------------
+OPTIMIZER CHANGE:
+
+model = Sequential() # create model
+model.add(Dense(32, input_dim=n_cols, init='uniform', activation='sigmoid'))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(64, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(32, activation="relu", kernel_initializer="uniform"))
+model.add(Dense(1, activation='tanh')) # output layer
+model.add(Dropout(0.1))
+
+model.compile(optimizer=SGD(lr=.001),loss='mean_squared_error', metrics=['accuracy'])
+history = model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=32, callbacks=[tbCallBack])
+
+Trained:  0.12 , trained data loss 0.4843
+Validation:  0.1176 , validation loss  0.4854
+
+-------------------------------------------------------------------------------------------------------------------------------
+ACTIVATION CHANGE:
+
+model = Sequential() # create model
+model.add(Dense(32, input_dim=n_cols, init='uniform', activation='sigmoid'))
+model.add(Dense(64, activation="sigmoid", kernel_initializer="uniform"))
+model.add(Dense(64, activation="sigmoid", kernel_initializer="uniform"))
+model.add(Dense(64, activation="sigmoid", kernel_initializer="uniform"))
+model.add(Dense(32, activation="sigmoid", kernel_initializer="uniform"))
+model.add(Dense(1, activation='relu')) # output layer
+model.add(Dropout(0.1))
+
+model.compile(optimizer=Adam(lr=.001),loss='mean_squared_error', metrics=['accuracy'])
+history = model.fit(X_train, Y_train, validation_data=(X_test, Y_test), epochs=50, batch_size=32, callbacks=[tbCallBack])
+Trained:  0.88 , trained data loss 0.1124
+Validation:  0.8824 , validation loss  0.111
 
 
 
